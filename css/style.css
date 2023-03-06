@@ -1,0 +1,693 @@
+/* Basic reset */
+:after:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+/*-----BODY-----*/
+body {
+    font-family: 'Montserrat', serif;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* --- HEADER -- */
+.logo {
+    position: absolute;
+    width: 150px;
+    margin-left: 5px;
+}
+
+.topnav {
+    overflow: hidden;
+    padding-left: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+}
+
+.topnav a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 25px 50px;
+    font-size: 25px;
+    font-weight: 600;
+
+}
+
+.topnav a:hover {
+    background-color: rgba(0, 0, 0, 0.423);
+    color: white;
+}
+
+.topnav a.active {
+    background-color: rgba(0, 0, 0, 0.423);
+    color: white;
+}
+
+.button {
+    font-family: 'Montserrat', serif;
+    position: absolute;
+    color: black;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 80%;
+    width: 130px;
+    border: none;
+    background-color: white;
+}
+
+.button1 {
+    margin-left: 90%;
+    background-color: rgba(0, 0, 0, 0.423);
+    color: white;
+}
+
+.button:hover {
+    background: #F6F9FE;
+    color: rgba(0, 0, 0, 0.395);
+}
+
+.button:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+.button:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+}
+
+
+/* --- FORSIDE MED TEST */
+
+.forside_tekst {
+    font-family: 'Montserrat', serif;
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    margin-left: 60%;
+    margin-top: 180px;
+    letter-spacing: 5px;
+    line-height: 1.4;
+}
+
+
+.test {
+    font-family: 'Montserrat', serif;
+    position: absolute;
+    color: white;
+    border-radius: 45px;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    width: 280px;
+    border: none;
+    background-color: #ED745A;
+    margin-left: 61%;
+    margin-top: 390px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* --- TEST --- */
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    z-index: 9;
+
+}
+
+
+/* Add styles to the form container */
+.form-container {
+    /* max-width: 300px; */
+    width: 1100px;
+    min-height: 400px;
+    padding: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/* ---- TEST SPØRGSMÅL ---- */
+.spg_txt {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: 30px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: black;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn {
+    font-family: 'Montserrat', serif;
+    position: absolute;
+    color: black;
+    border-radius: 45px;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    width: 260px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.898);
+    margin-left: 71%;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-answer {
+    font-family: 'Montserrat', serif;
+    color: white;
+    border-radius: 45px;
+    padding: 15px;
+    background-color: black;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 25px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+    padding: 16px 20px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.btn-answer:hover {
+    background-color: #78AA4D;
+}
+
+.checkmark1 {
+    display: none;
+}
+
+.box-1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ret-flex {
+    display: flex;
+    flex-direction: column;
+    max-width: 100px;
+}
+
+
+.img {
+    max-width: 120px;
+    border-radius: 40px;
+    padding-bottom: 5px;
+}
+
+/* --- RESULTAT -- */
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: black;
+    color: white;
+    padding: 16px 80px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    font-size: 24px;
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    /* margin-left: 800px;
+    margin-top: 150px; */
+    bottom: 10%;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    margin-left: 1050px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 30px;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+.test:hover {
+    background: black;
+    color: white;
+}
+
+.test:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+.test:focus {
+    outline: none;
+}
+
+
+
+.baggrund_billede {
+    width: 100%;
+}
+
+/* ---- TEST SPØRGSMÅL SLUT */
+
+/* ---- CONTENT ----- */
+
+/* --- INSPIRATION SECTION -- */
+.inspiration_txt {
+    text-align: center;
+    font-size: 40px;
+}
+
+.inspiration_card {
+    font-family: 'Montserrat', serif;
+    transform: translateY(-200px);
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.468);
+    width: 95%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 40px;
+}
+
+
+.forside_billede {
+    height: 450px;
+    border-radius: 25px;
+    width: 96%;
+    padding: 5px;
+}
+
+.tekst {
+    text-align: center;
+    font-size: 22px;
+}
+
+
+.billede_wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* --- LEVERING SECTION -- */
+.levering_billede {
+    width: 45%;
+    border-radius: 20px;
+    margin: 50px;
+}
+
+.levering_overskrift {
+    float: right;
+    width: 45%;
+    padding-top: 20px;
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 50px;
+}
+
+.txt {
+    float: right;
+    margin-right: 2.5%;
+    width: 45%;
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 40px;
+    transform: translateY(-267px);
+}
+
+.valg {
+    font-family: 'Montserrat', serif;
+    position: absolute;
+    color: black;
+    border-radius: 45px;
+    margin-top: 430px;
+    margin-left: 100px;
+    padding: 20px;
+    font-size: 30px;
+    width: 300px;
+    background-color: #FDF9F5;
+    border: none;
+}
+
+
+/* --- FOOTER --- */
+
+.footer {
+    position: absolute;
+    /* transform: translateY(425%); */
+    background-color: #FDF9F5;
+    width: 100%;
+    height: 250px;
+}
+
+.footer_card {
+    width: 90%;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    padding-left: 10px;
+}
+
+.footer_card1 {
+    text-align: center;
+    transform: translateY(-80px);
+    font-size: 20px;
+    color: black;
+}
+
+.footer_ikons {
+    padding-left: 1200px;
+    transform: translateY(-150px);
+    font-size: larger;
+
+    justify-content: space-between;
+}
+
+.fa-brands {
+    font-size: 45px;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.footer_link {
+    color: black;
+}
+
+
+/* ---- KILDE: https://www.w3schools.com/howto/howto_css_loader.asp  */
+
+
+
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+
+#myDiv {
+    display: none;
+    text-align: center;
+}
+
+
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+/* Clear floats after the columns */
+.card_row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #DF6746;
+    border-radius: 25px;
+}
+
+.price {
+    color: black;
+    font-size: 22px;
+}
+
+
+.card_column {
+    float: left;
+    width: 30%;
+    margin: 14px 16px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.a_link {
+    text-decoration: none;
+    color: #000;
+}
+
+/* ===================================== KATEGORI SIDE =========================
+======================================================================== */
+
+/* -- UDVALGTE KASSER */
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.kasser {
+    font-family: 'Montserrat', serif;
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    letter-spacing: 5px;
+    line-height: 1.4;
+}
+
+
+.card-kasser {
+    font-family: 'Montserrat', serif;
+    position: absolute;
+    transform: translateY(240px);
+    margin-left: 50px;
+}
+
+
+.cards {
+    box-shadow: 0 4px 8px 0 rgba(0.8, 0.8, 0.8, 0.8);
+    width: 330px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #DF6746;
+    border-radius: 25px;
+}
+
+.box {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 100%;
+}
+
+.btn_choice {
+    outline: 0;
+    padding: 12px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 40%;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+/* -- -MåltidsKASSER  --*/
+
+.card_container {
+    display: flex;
+    /* flex-direction: column; */
+    margin: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.blandselv_card {
+    background-color: #CC6A97;
+}
+
+.plante_card {
+    background-color: #7E9B69;
+}
+
+.veggie_card {
+    background-color: #78AA4D;
+}
+
+.meat_card {
+    background-color: #D07939;
+}
+
+.fiskemand_card {
+    background-color: #324980eb;
+}
+
+.umami_card {
+    background-color: #D8AD20;
+}
+
+
+
+
+.footer1 {
+    transform: translateY(425%);
+}

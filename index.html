@@ -1,0 +1,364 @@
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Nippon | Forside </title>
+
+    <!-- ikoner  -->
+    <script src="https://kit.fontawesome.com/66a5a04b45.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+    <header>
+        <div class="topnav">
+            <a href="kategori.html">Måltidskasser</a>
+            <a href="#test"> Test</a>
+            <a href="#opskrift">Opskrift</a>
+            <a href="#about">Kontakt</a>
+        </div>
+
+        <button class="button">Log in</button>
+        <button class="button button1">Opret bruger</button>
+
+        <a href="index.html"><img src="img/logo.png" class="logo" alt="Logo"></a>
+    </header>
+
+
+    <main>
+
+        <h1 class="forside_tekst">
+            FIND DEN
+            PERFEKTE <br>
+            MÅLTIDSKASSE
+            TIL DIG
+        </h1>
+        <button class="test" onclick="openForm()">Tag vores test</button>
+        <!-- The form -->
+        <div class="form-popup" id="myForm">
+
+            <form class="form-container">
+
+                <!-- SPØRGSMÅL 1  -->
+                <button type="button" class="cancel" onclick="closeForm()">X</button>
+                <h1 class="spg_txt">Hvor mange retter vil du foretrække
+                    at have i din måltidkasse?</h1>
+
+                <label class="container"> 3 Retter
+                    <input type="radio" checked="checked" name="radio" onclick="openForm1(3)">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">4 Retter
+                    <input type="radio" name="radio" onclick="openForm1(4)">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"> 5 Retter
+                    <input type="radio" name="radio" onclick="openForm1(5)">
+                    <span class="checkmark"></span>
+                </label>
+
+
+                <button class="btn" onclick="next()">Næste</button>
+
+            </form>
+        </div>
+
+        <!-- SPØRGSMÅL 2  -->
+
+        <div class="form-popup" id="myForm1">
+
+            <form class="form-container">
+
+                <button type="button" class="cancel" onclick="closeForm()">X</button>
+                <h1 class="spg_txt">Vælg 3 spisevaner du mest foretrækker</h1>
+
+                <label class="container"> Flexitar
+                    <input type="radio" checked="checked" name="radio" onclick="openForm2(1)">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Vegetar
+                    <input type="radio" name="radio" onclick="openForm2(2)">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"> Fisk og skaldyr
+                    <input type="radio" name="radio" onclick="openForm2(3)">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container"> Vegansk
+                    <input type="radio" name="radio" onclick="openForm2(4)">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container"> Mad med køb
+                    <input type="radio" name="radio" onclick="openForm2(5)">
+                    <span class="checkmark"></span>
+                </label>
+
+                <button class="btn" onclick="next()">Næste</button>
+
+            </form>
+        </div>
+
+
+        <!-- SPØRGSMÅL 3  -->
+        <div class="form-popup" id="myForm2">
+
+            <form class="form-container">
+
+                <button type="button" class="cancel" onclick="closeForm()">X</button>
+                <h1 class="spg_txt">Hvor lang tid vil du bruge på madlavning? </h1>
+
+                <label class="container"> 15-20 minutter
+                    <input type="radio" checked="checked" name="radio" onclick="openForm3(1)">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">20-35 minutter
+                    <input type="radio" name="radio" onclick="openForm3(2)">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"> 35-45 minutter
+                    <input type="radio" name="radio" onclick="openForm3(3)">
+                    <span class="checkmark"></span>
+                </label>
+                <button class="btn" onclick="next()">Næste</button>
+            </form>
+        </div>
+
+        <!-- SPØRGSMÅL 4  -->
+
+        <div class="form-popup" id="myForm3">
+
+            <form class="form-container">
+
+                <button type="button" class="cancel" onclick="closeForm()">X</button>
+                <h1 class="spg_txt">Har du allergi? </h1>
+
+                <label class="container"> Nej
+                    <input type="radio" checked="checked" name="radio" onclick="openForm4(1)">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"> Gluten
+                    <input type="radio" name="radio" onclick="openForm4(2)">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"> Laktose
+                    <input type="radio" name="radio" onclick="openForm4(3)">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container"> Nødder
+                    <input type="radio" name="radio" onclick="openForm4(4)">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container"> Andet
+                    <input type="radio" name="radio" onclick="openForm4(5)">
+                    <span class="checkmark"></span>
+                </label>
+
+                <button class="btn" onclick="next()">Næste</button>
+            </form>
+        </div>
+
+
+        <!-- SPØRGSMÅL 5 -->
+
+        <div class="form-popup" id="myForm4">
+
+            <form class="form-container">
+
+                <button type="button" class="cancel" onclick="closeForm()">X</button>
+                <h1 class="spg_txt">Vælg op til 3 opskrifter som du kan lide </h1>
+
+                <div class=" box-1">
+                    <label class="container ret-flex"><img src="img/bao.jpg" class="img" alt="Bao m. Crispy tofu">Bao
+                        m. Crispy tofu
+                        <input type="radio" checked="checked" name="radio" onclick="openForm5(1)">
+                        <span class="checkmark checkmark1"></span>
+                    </label>
+
+                    <label class="container ret-flex"><img src="img/rispapir.png" class="img" alt="Rispapirsruller m. frisk fyld og chili">
+                        Rispapirsruller m. frisk fyld og chili
+                        <input type="radio" name="radio" onclick="openForm5(2)">
+                        <span class="checkmark checkmark1"></span>
+                    </label>
+
+                    <label class="container ret-flex"><img src="img/ramen.png" class="img" alt=" Ramen suppe m. kylling og koriander">
+                        Ramen suppe m. kylling og koriander
+                        <input type="radio" name="radio" onclick="openForm5(3)">
+                        <span class="checkmark checkmark1"></span>
+                    </label>
+                </div>
+
+                <div class=" box-1">
+                    <label class="container ret-flex"><img src="img/stegtnudler.png" class="img"
+                            alt="Stegte nudler m. grøntsager">
+                        Stegte nudler m. grøntsager
+                        <input type="radio" name="radio" onclick="openForm5(4)">
+                        <span class="checkmark checkmark1"></span>
+                    </label>
+
+                    <label class="container ret-flex"><img src="img/redcurry.png" class="img" alt="Ris m. kylling og rød karry">
+                        Ris m. kylling og rød karry
+                        <input type="radio" name="radio" onclick="openForm5(5)">
+                        <span class="checkmark checkmark1"></span>
+                    </label>
+
+                    <label class="container ret-flex"><img src="img/pokeball.png" class="img" alt="Poke bowl m. laks">
+                        Poke bowl m. laks
+                        <input type="radio" name="radio" onclick="openForm5(6)">
+                        <span class="checkmark checkmark1"></span>
+                    </label>
+                </div>
+
+
+
+                <button class="btn-answer" onclick="next()">SE RESULTAT </button>
+            </form>
+        </div>
+
+        <!-- Loading side  -->
+
+        <div class="form-popup" id="myForm5">
+
+            <form class="form-container">
+
+                <button type="button" class="cancel" onclick="closeForm()">X</button>
+                <div id="loader"></div>
+
+                <div style="display:none;" id="myDiv" class="animate-bottom">
+                    <h1>Disse måltidskasser tror vi passer perfekt til dig! </h1>
+                    <div class="card_row card_row--test">
+                        <div class="card_column">
+                            <a href="kategori.html" class="a_link">
+                                <div class="card">
+                                    <img src="img/boks.png" alt="Kasse 1" class="box">
+                                    <h1>Kasse 1</h1>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <p>Denne kasse er udvalgt specifikt til dig</p>
+                                    <p class="price">319DKK</p>
+
+                                    <p><button class="btn_choice">Vælg</button></p>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="card_column">
+                            <a href="kategori.html" class="a_link">
+                                <div class="card">
+                                    <img src="img/boks.png" alt="Kasse 2" class="box">
+                                    <h1>Kasse 2</h1>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <p>Denne kasse er udvalgt specifikt til dig</p>
+                                    <p class="price">359 DKK</p>
+
+                                    <p><button class="btn_choice">Vælg</button></p>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="card_column">
+                            <a href="kategori.html" class="a_link">
+                                <div class="card">
+                                    <img src="img/boks.png" alt="Kasse 3" class="box">
+                                    <h1>Kasse 3</h1>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <p>Denne kasse er udvalgt specifikt til dig </p>
+                                    <p class="price">419 DKK</p>
+                                    <p><button class="btn_choice">Vælg</button></p>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="btn-answer" onclick="next()">Afslut</button>
+            </form>
+        </div>
+
+        <!-- SPØRGSMÅL SVAR  -->
+        <img src="img/FORSIDE.PNG" alt="Baggrunds billede" class="baggrund_billede">
+    </main>
+
+    <section>
+
+        <div class="inspiration_card">
+            <h1 class="inspiration_txt"> Få inspiration til din aftensmad her </h1>
+            <div class="billede_wrapper">
+                <div class="opskrifter_container">
+                    <img src="img/suppe.png" alt="suppe" class="forside_billede">
+                    <p class="tekst">KOKOS RAMEN MED TOFU</p>
+                </div>
+
+                <div class="opskrifter_container">
+                    <img src="img/laks.png" alt="laks" class="forside_billede">
+                    <p class="tekst">POKE MED LAKS SASHIMI</p>
+                </div>
+
+                <div class="opskrifter_container">
+                    <img src="img/nudel.png" alt="nudel" class="forside_billede">
+                    <p class="tekst">NUDELRET MED BROCOLI</p>
+                </div>
+
+
+            </div>
+
+            <!-- LEVERING SECTION -->
+
+
+            <div class="levering">
+                <img src="img/kasse.png" alt="postmand" class="levering_billede">
+
+                <p class="levering_overskrift"> Rejs til Asien uden at forlade<br> køkken med vores måltidkasser</p>
+                <p class="txt">Bring Asiens smag til dit dørtrin med vores skræddersyet måltidskasse.
+                    Klik og bestil. Det har aldrig været nemmere.
+                </p>
+
+                <button class="valg">Se vores udvalg</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer footer1">
+        <div class="footer_card">
+            <h4 class="footer_card_header">Kontakt </h4>
+            <p class="footer_link">
+                <a href="#" class="footer_link">nippon@gmail.com</a>
+            </p>
+            <p class="footer_link">
+                <a href="#" class="footer_link">+45 11223344</a>
+            </p>
+        </div>
+
+        <div class="footer_card1">
+
+            <a href="#" class="footer_link">Vilkår og betingelser</a>
+            <a href="#" class="footer_link">Privatpolitik</a>
+            <a href="#" class="footer_link">Smiley-rapoorter</a>
+            <a href="#" class="footer_link">Politik for etnis handel</a>
+        </div>
+
+        <div class="footer_ikons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+
+
+
+    </footer>
+
+
+</body>
+
+</html>
